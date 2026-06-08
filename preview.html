@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Hawkinson Media brand guidelines including logo usage, colors, typography, and basic visual standards." />
+  <title>Hawkinson Media | Brand Guidelines</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue: #36ADFB;
+      --gray: #808080;
+      --black: #0B0D10;
+      --white: #FFFFFF;
+      --light: #F5F7FA;
+      --border: #E2E6EA;
+      --text: #171717;
+      --muted: #5F6670;
+      --max: 980px;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Rubik", Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(100% - 40px, var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      font-size: 1.15rem;
+    }
+
+    .mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      background: var(--blue);
+      color: var(--white);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--black);
+    }
+
+    .hero {
+      padding: 86px 0 70px;
+      background:
+        radial-gradient(circle at top right, rgba(54, 173, 251, 0.18), transparent 34%),
+        linear-gradient(180deg, var(--white), var(--light));
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 800;
+      font-size: 0.78rem;
+      margin: 0 0 14px;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 7vw, 5rem);
+      line-height: 0.96;
+      letter-spacing: -0.065em;
+      margin: 0;
+      max-width: 780px;
+    }
+
+    .hero p {
+      max-width: 660px;
+      color: var(--muted);
+      font-size: 1.12rem;
+      margin: 24px 0 0;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid var(--black);
+    }
+
+    .button.primary {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .button.secondary {
+      background: var(--white);
+      color: var(--black);
+    }
+
+    section {
+      padding: 68px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-title {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      margin: 0;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      margin: 0;
+      max-width: 660px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px;
+      background: var(--white);
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .logo-demo {
+      min-height: 180px;
+      display: grid;
+      place-items: center;
+      background: var(--light);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      text-align: center;
+      padding: 32px;
+    }
+
+    .logo-lockup {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: clamp(1.5rem, 4vw, 2.35rem);
+      font-weight: 800;
+      letter-spacing: -0.05em;
+    }
+
+    .logo-lockup .mark {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      font-size: 1.3rem;
+    }
+
+    .rule-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .rule-list li + li {
+      margin-top: 8px;
+    }
+
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .swatch {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--white);
+    }
+
+    .swatch-color {
+      height: 120px;
+    }
+
+    .swatch-info {
+      padding: 16px;
+    }
+
+    .swatch-info strong,
+    .card strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .swatch-info span,
+    .card span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .type-sample {
+      display: grid;
+      gap: 14px;
+    }
+
+    .type-large {
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+      font-weight: 800;
+    }
+
+    .type-medium {
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .type-body {
+      color: var(--muted);
+      max-width: 680px;
+    }
+
+    .usage-card {
+      display: grid;
+      gap: 10px;
+    }
+
+    .status {
+      width: fit-content;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .status.do {
+      color: #0F6B3A;
+      background: #E9F8EF;
+    }
+
+    .status.dont {
+      color: #9A261D;
+      background: #FDEDEA;
+    }
+
+    footer {
+      background: var(--black);
+      color: var(--white);
+      padding: 44px 0;
+    }
+
+    footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    footer p {
+      color: rgba(255,255,255,0.68);
+      margin: 4px 0 0;
+    }
+
+    footer a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    @media (max-width: 760px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 64px 0 54px;
+      }
+
+      section {
+        padding: 50px 0;
+      }
+
+      .grid.two,
+      .grid.three,
+      .swatches {
+        grid-template-columns: 1fr;
+      }
+
+      .logo-lockup {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Hawkinson Media Brand Guidelines home">
+        <span class="mark">HM</span>
+        <span>Hawkinson Media</span>
+      </a>
+      <nav aria-label="Page navigation">
+        <a href="#logo">Logo</a>
+        <a href="#colors">Colors</a>
+        <a href="#typography">Typography</a>
+        <a href="#usage">Usage</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Brand Guidelines</p>
+        <h1>Simple standards for a clean, consistent brand.</h1>
+        <p>Use this page as the basic reference for Hawkinson Media’s logo, colors, typography, and everyday visual presentation.</p>
+        <div class="buttons">
+          <a class="button primary" href="#colors">View Brand Colors</a>
+          <a class="button secondary" href="#usage">Logo Usage</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="logo">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Logo</h2>
+          <p>The logo should feel clean, modern, and easy to read. Give it breathing room and avoid placing it on busy backgrounds.</p>
+        </div>
+
+        <div class="grid two">
+          <div class="logo-demo">
+            <div class="logo-lockup">
+              <span class="mark">HM</span>
+              <span>Hawkinson Media</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <strong>Clear space</strong>
+            <span>Keep open space around the logo equal to at least the height of the HM mark.</span>
+            <br><br>
+            <strong>Minimum size</strong>
+            <span>Use the full logo only when it remains readable. Use the HM mark for small spaces.</span>
+            <br><br>
+            <strong>Preferred background</strong>
+            <span>White, black, light gray, or brand blue backgrounds work best.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="colors">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Colors</h2>
+          <p>Keep the palette simple. Blue is the main accent. Gray supports text and secondary details. Black and white should carry most layouts.</p>
+        </div>
+
+        <div class="swatches">
+          <div class="swatch">
+            <div class="swatch-color" style="background:#36ADFB"></div>
+            <div class="swatch-info">
+              <strong>Brand Blue</strong>
+              <span>#36ADFB</span>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color" style="background:#808080"></div>
+            <div class="swatch-info">
+              <strong>Brand Gray</strong>
+              <span>#808080</span>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color" style="background:#0B0D10"></div>
+            <div class="swatch-info">
+              <strong>Black</strong>
+              <span>#0B0D10</span>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color" style="background:#FFFFFF"></div>
+            <div class="swatch-info">
+              <strong>White</strong>
+              <span>#FFFFFF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="typography">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Typography</h2>
+          <p>Rubik is the primary typeface. It should be used for headings, buttons, navigation, and body copy.</p>
+        </div>
+
+        <div class="card type-sample">
+          <div class="type-large">Rubik Extra Bold</div>
+          <div class="type-medium">Clean headings, strong labels, and readable navigation.</div>
+          <div class="type-body">Use regular weight for body text, medium or bold for emphasis, and extra bold for major headlines. Avoid overusing all caps except for short labels or section tags.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="usage">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Usage</h2>
+          <p>These basic rules keep the brand from looking sloppy. Consistency matters more than decoration.</p>
+        </div>
+
+        <div class="grid two">
+          <div class="card usage-card">
+            <span class="status do">Do</span>
+            <strong>Keep it simple and readable.</strong>
+            <ul class="rule-list">
+              <li>Use strong contrast between text and background.</li>
+              <li>Use brand blue as an accent, not as the entire design.</li>
+              <li>Keep spacing generous and layouts uncluttered.</li>
+              <li>Use the same logo, colors, and font consistently.</li>
+            </ul>
+          </div>
+
+          <div class="card usage-card">
+            <span class="status dont">Do Not</span>
+            <strong>Avoid weakening the brand.</strong>
+            <ul class="rule-list">
+              <li>Do not stretch, skew, or distort the logo.</li>
+              <li>Do not place the logo on chaotic or low-contrast images.</li>
+              <li>Do not add random colors outside the brand palette.</li>
+              <li>Do not use multiple competing fonts in the same layout.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <strong>Hawkinson Media Brand Guidelines</strong>
+        <p>Copyright © 2026 Hawkinson Media, LLC. All rights reserved.</p>
+      </div>
+      <a href="mailto:bridger@hawkinsonmedia.com">bridger@hawkinsonmedia.com</a>
+    </div>
+  </footer>
+</body>
+</html>
